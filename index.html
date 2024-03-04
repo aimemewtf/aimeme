@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>test title</title>
+        <script src="./script/jQuery.js"></script>
+    </head>
+    <body>
+
+        <div id="navigator">
+            <p style="font-size: 26px;">Aimeme</p>
+            <div id="buttoncontainer">
+                <div id="button">home</div>
+                <div id="button">about</div>
+                <div id="button">roadmap</div>
+                <div style="width: 2px; height: 32px; background-color: #215201;"></div>
+                <div id="button">mint</div>
+            </div>
+        </div>
+
+        <div id="description">
+            <p class="pixel" style="font-size: 40px;">aimeme</p>
+            <p class="pixel" style="line-height: 36px;">Humans won't be able to reliably supervise any<br/> much smarter than us</p>
+            <div class="pixel" id="descriptionImp">passport to the meme world</div>
+        </div>
+
+        <div class="roadmap_s shadow_rect_s" id="roadmap_c">
+            
+            <div class="roadmap_container_s" id="roadmap_container_c">
+                <div class="tagContainer">
+                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <p>ROADMAP</p>
+                </div>
+
+                <div class="timeline_container_s">
+                    <div class="timeline_line_container_s"></div>
+                    <div class="timeline_line_current_container_s"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="about-token-wrapper">
+            <div class="guide-about shadow_rect_s">
+                <div class="tagContainer">
+                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <p>ABOUT</p>
+                </div>
+                <p class="guide-about-desc">Vision: aimeme.wtf community's mission is to uphold a large language model with its own meme worldview. It aims to bring creators and the community together through inscriptions, NFTs, tokens, and memes.</p>
+                
+            </div>
+            <div class="guide-tokenomics shadow_rect_s">
+                
+                <div class="tagContainer">
+                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <p>TOKENOMICS</p>
+                </div>
+                <div>
+                    <div class="tag_desc_s" id="tag_desc_s_tokenomics_o">Limited edition mint</div>
+                    <div class="tag_desc_s" id="tag_desc_s_tokenomics_t">2000</div>
+                    <div class="tag_desc_s" id="tag_desc_s_tokenomics_tr">The Fair Launch is about to begin. 10% of all revenue will be used to burn the Meme inscription</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow_rect_s guide-hotnft">
+            <div class="tagContainer">
+                <img class="tagImg" src="res/imgs/tag.png" alt="">
+                <p>HOT NFT</p>
+            </div>
+        </div>
+
+        <div id="contact_us">
+            <span class="contact_us_title">CONTACT US</span>
+            <p class="contact_us_desc">Scriptions lovers are welcome to join us</p>
+            <div class="contact-us-social-wrapper"">
+                <a href="https://twitter.com/aimemewtf"><img class="contact_us_icon" src="./res/imgs/contact_us_twitter.png" alt=""></a>
+                <a href="https://t.me/AIMEMEBLAST" target="_blank"><img class="contact_us_icon" src="./res/imgs/contact_us_telegram.png" alt=""></a>
+            </div>
+        </div>
+
+        <div>
+            <div class="seperator"></div>
+            <p id="icp">©2024 by aimeme. All rights reserved!</p>
+        </div>
+
+        <script>
+            const timelinedata = [
+                {"date": "Soon", "progress": "nscription Fair Launch"},
+                {"date": "2024-02", "progress": "Multiple NFT launch"},
+                {"date": "2024-03", "progress": "Launch hodler benefits"},
+                {"date": "2024-04", "progress": "Launch Dapp"},
+                {"date": "2024-05", "progress": "Launch meme marketplace"},
+                {"date": "2024-06", "progress": "Launch large meme language models"},
+            ]
+            $(document).ready(function(){
+                timelinedata.forEach(function(item ,index){ 
+                    if (index % 2 == 0) {
+                        $('#roadmap_container_c').append("<div class='timeline_desc_container_s' style='left: calc(100%/6*" + index + ");'><div class='timeline_circle_s'></div><p class='timeline_desc_date_s'>" + item["date"] + "</p><p class='timeline_desc_progress_s'>" + item["progress"] + "</p></div>")
+                    }else {
+                        $('#roadmap_container_c').append("<div class='timeline_desc_container_top_s' style='left: calc(100%/6*"+ index +");''><p class='timeline_desc_progress_s'>"+ item["progress"]+"</p><p class='timeline_desc_date_s'>" + item["date"] + "</p><div class='timeline_circle_s'></div></div>")
+                    }
+                }) 
+            })
+        </script>
+
+    </body>
+</html>
