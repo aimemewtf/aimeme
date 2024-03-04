@@ -4,17 +4,19 @@
         <link rel="stylesheet" href="css/style.css">
         <title>test title</title>
         <script src="./script/jQuery.js"></script>
+        <script src="./script/jquery.scrollTo.min.js"></script>
     </head>
     <body>
 
         <div id="navigator">
             <p style="font-size: 26px;">Aimeme</p>
             <div id="buttoncontainer">
-                <div id="button">home</div>
-                <div id="button">about</div>
-                <div id="button">roadmap</div>
+                
+                <div id="about-btn" class="button">about</div>
+                <div id="roadmap-btn" class="button">roadmap</div>
                 <div style="width: 2px; height: 32px; background-color: #215201;"></div>
-                <div id="button">mint</div>
+                <div class="button">Generate</div>
+                <div id="button" class="button">mint</div>
             </div>
         </div>
 
@@ -68,6 +70,13 @@
                 <img class="tagImg" src="res/imgs/tag.png" alt="">
                 <p>HOT NFT</p>
             </div>
+            <div class="nfts-main-container">
+                <div class="nfts-table-scroll">
+                    <table class="nfts-wrapper">
+
+                    </table>
+                </div>
+            </div>
         </div>
 
         <div id="contact_us">
@@ -85,6 +94,14 @@
         </div>
 
         <script>
+
+            function loop() {
+                $('.nfts-table-scroll').scrollTo('max',{axis:'x', duration: 15000, easing: 'linear', onAfter: () => {
+                    $('.nfts-table-scroll').scrollTo(0,0)
+                    loop()
+                }})
+            }
+
             const timelinedata = [
                 {"date": "Soon", "progress": "nscription Fair Launch"},
                 {"date": "2024-02", "progress": "Multiple NFT launch"},
@@ -93,6 +110,7 @@
                 {"date": "2024-05", "progress": "Launch meme marketplace"},
                 {"date": "2024-06", "progress": "Launch large meme language models"},
             ]
+
             $(document).ready(function(){
                 timelinedata.forEach(function(item ,index){ 
                     if (index % 2 == 0) {
@@ -101,7 +119,24 @@
                         $('#roadmap_container_c').append("<div class='timeline_desc_container_top_s' style='left: calc(100%/6*"+ index +");''><p class='timeline_desc_progress_s'>"+ item["progress"]+"</p><p class='timeline_desc_date_s'>" + item["date"] + "</p><div class='timeline_circle_s'></div></div>")
                     }
                 }) 
+
+                const nfts = [62514,37431,93116,65854,73704,91296,51644,80594,20006,78358,62514,37431,93116,65854]
+                nfts.forEach((item, index) => {
+                    $('.nfts-wrapper').append("<td class='ntf-wrapper'><img src='./res/imgs/nfts/" + item + ".jpg' alt=''><p class='nft-name'>" + item + "</p><p class='nft-id'>ID #" + item + "</p></td>")
+                }) 
+
+                loop()
+
             })
+
+            $('#about-btn').click(() => {
+                $.scrollTo($('.about-token-wrapper'), 800, {axis: 'y'})
+            })
+
+            $('#roadmap-btn').click(() => {
+                $.scrollTo($('#roadmap_c'), 800, {axis: 'y'})
+            })
+            
         </script>
 
     </body>

@@ -139,7 +139,7 @@ p {
     margin-top: 16px;
 }
 
-#button {
+.button {
     line-height: 40px;
     height: 40px;
     padding: 5px 16px 5px 16px;
@@ -272,3 +272,57 @@ p {
 #description p:nth-child(2) {
     margin-top: 40px;
 }
+
+.nfts-wrapper {
+    border-spacing: 25.6px;
+    width: 100%;
+    table-layout: fixed;
+    overflow-x: scroll;
+}
+
+.nfts-main-container {
+    overflow: auto; 
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.nfts-table-scroll {
+    overflow: hidden;
+}
+
+.ntf-wrapper {
+    background: #215201;
+    width: 266px;
+    height: 327px;
+}
+
+.nfts-wrapper img {
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 242px;
+    height: 242px;
+
+}
+
+.nft-name {
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+    text-align: left;
+}
+
+.nft-id {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 4px;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+
