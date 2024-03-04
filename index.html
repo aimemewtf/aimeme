@@ -5,6 +5,7 @@
         <title>test title</title>
         <script src="./script/jQuery.js"></script>
         <script src="./script/jquery.scrollTo.min.js"></script>
+        <script src="./script/index.js"></script>
     </head>
     <body>
 
@@ -15,8 +16,8 @@
                 <div id="about-btn" class="button">about</div>
                 <div id="roadmap-btn" class="button">roadmap</div>
                 <div style="width: 2px; height: 32px; background-color: #215201;"></div>
-                <div class="button">Generate</div>
-                <div id="button" class="button">mint</div>
+                <div id="generator_c" class="button">Generate</div>
+                <div class="button">mint</div>
             </div>
         </div>
 
@@ -26,11 +27,48 @@
             <div class="pixel" id="descriptionImp">passport to the meme world</div>
         </div>
 
+        <div class="loading-screen" id="loading-screen-c">
+            <div class="loading">
+                <div class="flour" ></div>
+                <div class="flour" ></div>
+                <div class="flour" ></div>
+                <div class="flour" ></div>
+            </div>
+        </div>
+    
+        <div class="generator_page_box" id="generator_page_box_c">
+            <div class="generator_page_container">
+                <div class="generator_page_navi">
+                    <p>Generate</p>
+                    <img id="generator_close_c" src="./res/imgs/generator_close.svg" alt="">
+                </div>
+                <div class="generator_page_content_container">  
+                    <img id="generator_page_result_c" class="generator_page_result" src="" alt="image">
+                    <div id="generator_page_place_c" class="generator_page_result generator_page_place"><img src="./res/imgs/generate_placeholder.svg" alt="image"></div>
+                    <div class="generator_page_prompts_container">
+                        <div class="generator_page_prompts_title">
+                            <p>Prompts</p>
+                            <div class="generator_page_prompts_title_btn">Lucky</div>
+                        </div>
+                        <textarea id="generator_page_prompts_input" placeholder="Please enter prompts"></textarea>
+                        <div class="generator_button" id="generator_page_btn">Generate</div>
+                        <div class="generator_page_operation_container">
+                            <div id="generator_download_c">
+                                <img src="./res/imgs/generator_download.svg" alt="">
+                                <p>Download</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
         <div class="roadmap_s shadow_rect_s" id="roadmap_c">
             
             <div class="roadmap_container_s" id="roadmap_container_c">
                 <div class="tagContainer">
-                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <img class="tagImg" src="res/imgs/tag_container_icon.gif" alt="">
                     <p>ROADMAP</p>
                 </div>
 
@@ -45,7 +83,7 @@
         <div class="about-token-wrapper">
             <div class="guide-about shadow_rect_s">
                 <div class="tagContainer">
-                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <img class="tagImg" src="res/imgs/tag_container_icon.gif" alt="">
                     <p>ABOUT</p>
                 </div>
                 <p class="guide-about-desc">Vision: aimeme.wtf community's mission is to uphold a large language model with its own meme worldview. It aims to bring creators and the community together through inscriptions, NFTs, tokens, and memes.</p>
@@ -54,7 +92,7 @@
             <div class="guide-tokenomics shadow_rect_s">
                 
                 <div class="tagContainer">
-                    <img class="tagImg" src="res/imgs/tag.png" alt="">
+                    <img class="tagImg" src="res/imgs/tag_container_icon.gif" alt="">
                     <p>TOKENOMICS</p>
                 </div>
                 <div>
@@ -67,7 +105,7 @@
 
         <div class="shadow_rect_s guide-hotnft">
             <div class="tagContainer">
-                <img class="tagImg" src="res/imgs/tag.png" alt="">
+                <img class="tagImg" src="res/imgs/tag_container_icon.gif" alt="">
                 <p>HOT NFT</p>
             </div>
             <div class="nfts-main-container">
