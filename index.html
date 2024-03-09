@@ -5,7 +5,6 @@
         <title>AIMEME</title>
         <script src="./script/jQuery.js"></script>
         <script src="./script/jquery.scrollTo.min.js"></script>
-        <script src="./script/index.js"></script>
     </head>
     <body>
 
@@ -16,8 +15,7 @@
                 <div id="about-btn" class="button">about</div>
                 <div id="roadmap-btn" class="button">roadmap</div>
                 <div style="width: 2px; height: 32px; background-color: #215201;"></div>
-                <div id="generator_c" class="button">Generate</div>
-                <div class="button">mint</div>
+                <div id="mint" class="button">mint</div>
             </div>
         </div>
 
@@ -173,6 +171,10 @@
 
             $('#roadmap-btn').click(() => {
                 $.scrollTo($('#roadmap_c'), 800, {axis: 'y'})
+            })
+
+            $('#mint').click(()=> {
+                alert('Coming soon...')
             })
             
         </script>
